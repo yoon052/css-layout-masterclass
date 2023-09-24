@@ -7,27 +7,34 @@ body {
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
 
-  grid-template-areas:
+  /* grid-template-areas:
     'header header header header'
     'content content content menu'
-    'content content content menu'
-    'footer footer footer footer';
+    'footer footer footer footer'; */
+  grid-template:
+    'a a a a' 1fr
+    'b b b c' 2fr
+    'd d d d' 1fr / 1fr 1fr 1fr 1fr;
 }
 
 header {
   background-color: aqua;
+  grid-area: a;
 }
 
 section {
   background-color: coral;
+  grid-area: b;
 }
 
 aside {
   background-color: forestgreen;
+  grid-area: c;
 }
 
 footer {
   background-color: deeppink;
+  grid-area: d;
 }
